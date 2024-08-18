@@ -131,6 +131,7 @@ module.exports = () => {
         useUnifiedTopology: true,
         ssl: false,
         family: 4,
+        // serverApi: { version: '1', strict: true, deprecationErrors: true } X 
       })
       .then(() => {
         clearTimeout(connecting);

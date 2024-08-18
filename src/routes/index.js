@@ -20,7 +20,10 @@ router.post('/picture/remove', passport.authenticate('jwt', { session: false }, 
 
 router.post('/favorite/toggle', passport.authenticate('jwt', { session: false }, null), require('./toggle-favorite'));
 router.post('/favorites/list', passport.authenticate('jwt', { session: false }, null), require('./list-favorites'));
+
 router.post('/rooms/list', passport.authenticate('jwt', { session: false }, null), require('./list-rooms'));
+// router.post('/rooms/list', require('./list-rooms'));
+
 router.post('/room/get', passport.authenticate('jwt', { session: false }, null), require('./get-room'));
 router.post('/room/create', passport.authenticate('jwt', { session: false }, null), require('./create-room'));
 router.post('/room/join', passport.authenticate('jwt', { session: false }, null), require('./join-room'));
