@@ -127,11 +127,11 @@ module.exports = () => {
 
     mongoose
       .connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        ssl: false,
-        family: 4,
-        // serverApi: { version: '1', strict: true, deprecationErrors: true } X 
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
+        // ssl: false,
+        // family: 4,
+        serverApi: { version: '1', strict: true, deprecationErrors: true }
       })
       .then(() => {
         clearTimeout(connecting);
